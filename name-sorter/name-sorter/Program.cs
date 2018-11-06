@@ -10,6 +10,8 @@ namespace name_sorter
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Press any key..");
+            Console.ReadKey();
         }
     }
 }
