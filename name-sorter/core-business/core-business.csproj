@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D83B3FB2-B159-4773-B295-35707BB1EC5A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>name_sorter</RootNamespace>
-    <AssemblyName>name-sorter</AssemblyName>
+    <ProjectGuid>{EF92AAA4-A697-48B9-8801-CD0E9C160231}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>core_business</RootNamespace>
+    <AssemblyName>core-business</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="modules.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="sorter-bylastname1st.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\common-tools\common-tools.csproj">
       <Project>{4e1b1d17-e119-4015-94bb-eb72659daf35}</Project>
       <Name>common-tools</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\core-business\core-business.csproj">
-      <Project>{ef92aaa4-a697-48b9-8801-cd0e9c160231}</Project>
-      <Name>core-business</Name>
     </ProjectReference>
     <ProjectReference Include="..\core-interfaces\core-interfaces.csproj">
       <Project>{cdf6b884-146a-4a1e-b51b-fdbae2071cc0}</Project>
