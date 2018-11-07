@@ -18,7 +18,7 @@ namespace name_sorter
             var sortedList = sorter.sort(list);
             if (filetext.write(sortedList, targetFilePath))
             {
-                message = "SUCCESS : the result has been saved in file " + targetFilePath;
+                message = "SUCCESS : the result has been saved in the file " + targetFilePath;
             }
             else
             {

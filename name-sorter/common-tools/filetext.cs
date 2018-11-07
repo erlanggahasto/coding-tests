@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace common_tools
 {
+    //A utility class to read and write to/from a text file from/into a list of strings
     public static class filetext
     {
         public static List<string> read(string path)
