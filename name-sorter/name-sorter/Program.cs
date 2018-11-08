@@ -23,7 +23,7 @@ namespace name_sorter
             {
                 string filePath = args[0];
 
-                message = modules.sort(sorter, filePath, FILE_PATH_TARGET_DEFAULT);
+                message = modules.sortIntoFile(sorter, filePath, FILE_PATH_TARGET_DEFAULT);
             }
             else
             {

@@ -76,9 +76,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="empty-names-list.txt" />
+    <Content Include="master-sorted-names-list-2.txt" />
     <Content Include="master-sorted-names-list.txt" />
     <Content Include="jpeg-file.txt" />
     <Content Include="sorted-names-list.txt" />
+    <Content Include="unsorted-names-list-2.txt" />
     <Content Include="unsorted-names-list.txt" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

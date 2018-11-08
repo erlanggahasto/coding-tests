@@ -10,19 +10,31 @@ namespace name_sorter
 {
     public static class modules
     {
-        public static string sort(isorter sorter, string sourceFilePath, string targetFilePath)
+        public static string sortIntoFile(isorter sorter, string sourceFilePath, string targetFilePath)
         {
             string message = "";
 
-            var list = filetext.read(sourceFilePath);
-            var sortedList = sorter.sort(list);
-            if (filetext.write(sortedList, targetFilePath))
+            var unsortedList = filetext.read(sourceFilePath);
+            if (unsortedList.Count > 0)
             {
-                message = "SUCCESS : the result has been saved in the file " + targetFilePath;
+                //Sort if there's something to sort
+                var sortedList = sorter.sort(unsortedList);
+                foreach (var name in sortedList)
+                {
+                    Console.WriteLine(name);
+                }
+                if (filetext.write(sortedList, targetFilePath))
+                {
+                    message = "SUCCESS : the result has been saved in a file : " + targetFilePath;
+                }
+                else
+                {
+                    message = "ERROR : cannot save the result to the file : " + targetFilePath;
+                }
             }
             else
             {
-                message = "ERROR : failed to proceed";
+                message = "ERROR : nothing to sort here";
             }
 
             return message;
