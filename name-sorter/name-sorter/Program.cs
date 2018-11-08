@@ -16,6 +16,7 @@ namespace name_sorter
         static void Main(string[] args)
         {
             var sorter = new sorter_bylastname1st();
+            sorter.TheResultIsAboutToBeSaved += c_TheResultIsAboutToBeSaved;
 
             string message = "";
 
@@ -23,7 +24,7 @@ namespace name_sorter
             {
                 string filePath = args[0];
 
-                message = modules.sortIntoFile(sorter, filePath, FILE_PATH_TARGET_DEFAULT);
+                message = sorter.sort(filePath, FILE_PATH_TARGET_DEFAULT);
             }
             else
             {
@@ -33,6 +34,14 @@ namespace name_sorter
             Console.WriteLine(message);
             Console.WriteLine("Press any key..");
             Console.ReadKey();
+        }
+
+        static void c_TheResultIsAboutToBeSaved(object sender, TheResultIsAboutToBeSavedEventArgs e)
+        {
+            foreach (var name in e.SortedList)
+            {
+                Console.WriteLine(name);
+            }
         }
     }
 }

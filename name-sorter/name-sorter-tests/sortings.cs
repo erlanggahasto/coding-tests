@@ -47,7 +47,7 @@ namespace name_sorter_tests
         {
             var sorter = new sorter_bylastname1st();
             if (File.Exists(FILE_PATH_TARGET_EXISTING)) File.Delete(FILE_PATH_TARGET_EXISTING);
-            string message = modules.sortIntoFile(sorter, FILE_PATH_SOURCE_EXISTING, FILE_PATH_TARGET_EXISTING);
+            string message = sorter.sort(FILE_PATH_SOURCE_EXISTING, FILE_PATH_TARGET_EXISTING);
             Assert.AreEqual("SUCCESS", message.Split(' ')[0]);
         }
     }

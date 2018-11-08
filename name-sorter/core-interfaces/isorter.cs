@@ -9,5 +9,8 @@ namespace core_interfaces
     public interface isorter
     {
         List<string> sort(List<string> list);
+
+        string sort(string sourceFilePath, string targetFilePath);
+
     }
 }

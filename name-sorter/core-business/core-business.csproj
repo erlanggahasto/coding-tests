@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="sorter-base.cs" />
     <Compile Include="sorter-bylastname1st.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
